@@ -8,7 +8,7 @@ def split_fraction(fraction):
     return numerator, denominator
 
 
-def find_max_divider(a, b):
+def find_max_divisor(a, b):
     while b != 0:
         remainder = a % b
         a = b
@@ -23,7 +23,7 @@ def sum_fractions(fraction1, fraction2):
     sum_num = (num1 * den2 + num2 * den1)
     sum_den = den1 * den2
 
-    gcd_num = find_max_divider(sum_num, sum_den)
+    gcd_num = find_max_divisor(sum_num, sum_den)
     result_num = sum_num // gcd_num
     result_den = sum_den // gcd_num
 
@@ -37,7 +37,7 @@ def mult_fractions(fraction1, fraction2):
     mult_num = num1 * num2
     mult_den = den1 * den2
 
-    gcd_num = find_max_divider(mult_num, mult_den)
+    gcd_num = find_max_divisor(mult_num, mult_den)
     result_num = mult_num // gcd_num
     result_den = mult_den // gcd_num
     return f"{result_num}/{result_den}"
